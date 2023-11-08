@@ -1,0 +1,11 @@
+.header {
+    background-color: #6DBB4D;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.header h2 {
+    margin-left: 20px;
+    color: white;
+}
