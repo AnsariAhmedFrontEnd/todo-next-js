@@ -10,6 +10,7 @@ const AddTodo = () => {
 
     const todoData = {
       todo,
+      isCompleted: false
     };
 
 

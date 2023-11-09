@@ -40,25 +40,16 @@ const Todos = (props) => {
     }
   };
 
-  const inCompleteTodos = props.todos.filter(todo => !todo.isCompleted);
+  console.log(props.todos);
 
+  const completeTodos = props.todos.filter(todo => todo.isCompleted);
 
+  console.log(completeTodos);
 
-  const todoLists = inCompleteTodos.map((todo) => (
+  const todoLists = completeTodos.map((todo) => (
     <div key={todo.id} className={classes.container}>
       <div className={classes.title}>
         <h4>{todo.todo}</h4>
-      </div>
-      <div className={classes.actions}>
-        <button className={classes.delete} onClick={() => deleteTask(todo.id)}>
-          Delete
-        </button>
-        <button
-          className={classes.done}
-          onClick={() => markTaskAsDone(todo.id)}
-        >
-          Mark as Done
-        </button>
       </div>
     </div>
   ));
